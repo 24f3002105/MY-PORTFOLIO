@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhay Shukla | Futuristic Portfolio // IIT Madras</title>
+  <meta name="description" content="Official portfolio of Abhay Shukla - IIT Madras BS Student, Python & SQL Systems Architect, Machine Learning & AI Builder.">
+  <meta name="theme-color" content="#f8fafc">
+
+  <!-- Favicon / Cyber Icon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- High-Performance WebGL & Animation CDNs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Custom Cyber Cursor -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- Ambient Cyber Background Systems -->
+  <div class="cyber-background-grid"></div>
+  <div class="cyber-scanlines"></div>
+  <div class="vignette-overlay"></div>
+
+  <!-- 3D WebGL Canvas Layer (Three.js Quantum Core) -->
+  <div id="webgl-canvas-container"></div>
+
+  <!-- Cyber Navigation Header -->
+  <header class="cyber-nav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-badge">IITM</span>
+        <span class="logo-text">ABHAY<span>.OS</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">CORE</a></li>
+        <li><a href="#about">DOSSIER</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#projects">HOLO-DECK</a></li>
+        <li><a href="#journey">JOURNEY</a></li>
+        <li><a href="#terminal">AI TERMINAL</a></li>
+        <li><a href="#contact">TRANSMIT</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button id="audio-toggle-btn" class="audio-toggle-btn muted" title="Enable Cyber Audio Telemetry">
+          <div class="audio-waves">
+            <span></span><span></span><span></span>
+          </div>
+          <span>AUDIO FX</span>
+        </button>
+
+        <a href="#contact" class="cyber-btn cyber-btn-primary resume-download-trigger" style="padding: 8px 18px; font-size: 0.78rem;">
+          <i data-lucide="file-down" style="width:14px;height:14px;"></i>
+          <span>RESUME</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="content-wrapper">
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-content-col">
+          <div class="hero-telemetry-badge">
+            <span class="status-dot-pulse"></span>
+            <span>SYSTEM STATUS: OPTIMAL // IIT MADRAS NODE</span>
+          </div>
+
+          <h1 class="hero-title">
+            I AM <br>
+            <span class="glitch-text">ABHAY SHUKLA</span>
+          </h1>
+
+          <div class="hero-subtitle">
+            <span id="typewriter-text"></span>
+            <span class="typewriter-cursor"></span>
+          </div>
+
+          <p class="hero-bio">
+            Motivated tech student & engineer pursuing a <strong>Bachelor of Science (BS) at IIT Madras</strong> with an <strong>8.25 CGPA</strong>. Specialized in Python architectures, relational SQL systems, machine learning pipelines, and production-grade full-stack ecosystems.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="cyber-btn cyber-btn-primary">
+              <i data-lucide="layers" style="width:16px;height:16px;"></i>
+              <span>EXPLORE PROJECTS</span>
+            </a>
+            <a href="#terminal" class="cyber-btn cyber-btn-secondary">
+              <i data-lucide="terminal" style="width:16px;height:16px;"></i>
+              <span>LAUNCH AI TERMINAL</span>
+            </a>
+            <a href="#contact" class="cyber-btn cyber-btn-secondary">
+              <i data-lucide="send" style="width:16px;height:16px;"></i>
+              <span>GET IN TOUCH</span>
+            </a>
+          </div>
+
+          <!-- Hero Metrics HUD -->
+          <div class="hero-stats-deck">
+            <div class="stat-chip">
+              <span class="stat-val accent">8.25</span>
+              <span class="stat-label">IITM CGPA</span>
+            </div>
+            <div class="stat-chip">
+              <span class="stat-val">5+</span>
+              <span class="stat-label">PRODUCTION SYSTEMS</span>
+            </div>
+            <div class="stat-chip">
+              <span class="stat-val accent">2x</span>
+              <span class="stat-label">CERTIFIED (PY & ML)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero 3D Holo-Card Visual Centerpiece with User Avatar -->
+        <div class="hero-hologram-wrap">
+          <div class="holo-circle-ring"></div>
+          <div class="holo-circle-ring inner"></div>
+
+          <div class="holo-orbit-badge badge-top-left">
+            <i data-lucide="shield-check" style="width:14px;height:14px;color:var(--emerald-core);"></i>
+            <span>IIT Madras 2nd Year</span>
+          </div>
+
+          <div class="holo-orbit-badge badge-bottom-right">
+            <i data-lucide="brain-circuit" style="width:14px;height:14px;color:var(--cyan-core);"></i>
+            <span>AI Attendance & Vision</span>
+          </div>
+
+          <div class="holo-orbit-badge badge-bottom-left">
+            <i data-lucide="users" style="width:14px;height:14px;color:var(--violet-core);"></i>
+            <span>Event Coordinator</span>
+          </div>
+
+          <div class="holo-card-center">
+            <!-- Holographic Avatar Portal with User Image -->
+            <div class="holo-avatar">
+              <div class="holo-avatar-inner">
+                <img src="assets/abhay-avatar.jpg" alt="Abhay Shukla - IIT Madras" class="holo-avatar-img">
+              </div>
+            </div>
+            <h3 class="holo-name">Abhay Shukla</h3>
+            <p class="holo-tag">&lt;Tech Student & Engineer /&gt;</p>
+            <div class="holo-institution">
+              <i data-lucide="award" style="width:14px;height:14px;"></i>
+              <span>IIT Madras (BS)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About & Career Objective Dossier -->
+    <section id="about" class="section-wrap">
+      <div class="section-head">
+        <span class="section-pre-title">// SYSTEM DOSSIER</span>
+        <h2 class="section-title">ENGINEERING <span>PROFILE</span></h2>
+        <p class="section-desc">Technical competence, core problem solving, and professional trajectory.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="cyber-card dossier-card">
+          <div class="hud-corner-tl"></div>
+          <div class="hud-corner-br"></div>
+          <div class="dossier-header">
+            <span class="dossier-id">RECORD ID: AS-IITM-2026</span>
+            <span style="color: var(--emerald-core); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+              <span class="status-dot-pulse"></span> VERIFIED CREDENTIALS
+            </span>
+          </div>
+
+          <div class="dossier-body">
+            <p>
+              I am a technology student and fresher with rigorous foundations in <strong>Python programming, SQL databases, and data handling</strong>, currently pursuing a Bachelor of Science (BS) at the <strong>Indian Institute of Technology Madras (IIT Madras)</strong> with an <strong>8.25 CGPA</strong>.
+            </p>
+
+            <div class="objective-highlight">
+              <strong style="color:var(--cyan-core); display:block; margin-bottom: 6px; font-family:var(--font-mono); font-size:0.85rem;">
+                🎯 CAREER OBJECTIVE:
+              </strong>
+              "Seeking an entry-level role or internship where I can apply my technical skills, analytical problem-solving capability, and project experience to contribute to organizational growth while continuously mastering cutting-edge technologies."
+            </div>
+
+            <p>
+              Beyond raw coding, I bring leadership acumen demonstrated as an <strong>Event Coordinator at IIT Madras</strong>, coordinating complex operations, logistics, and multi-team communications.
+            </p>
+
+            <div class="dossier-specs-grid">
+              <div class="spec-item">
+                <span class="spec-label">INSTITUTION</span>
+                <span class="spec-value">IIT Madras</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">CURRENT CGPA</span>
+                <span class="spec-value" style="color:var(--cyan-core);">8.25 / 10.0</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">COLLEGE EMAIL</span>
+                <span class="spec-value" style="font-size:0.82rem; font-family:var(--font-mono); word-break:break-all;">24f3002105@ds.study.iitm.ac.in</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">PERSONAL EMAIL</span>
+                <span class="spec-value" style="font-size:0.82rem; font-family:var(--font-mono); word-break:break-all;">abhayshukla11487@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pillars-col">
+          <div class="cyber-card pillar-card">
+            <div class="pillar-icon-box">
+              <i data-lucide="code-2" style="width:24px;height:24px;"></i>
+            </div>
+            <div class="pillar-info">
+              <h4>Python & Backend Engineering</h4>
+              <p>Object-oriented paradigms, automation scripts, data stream handling, and RESTful API integrations.</p>
+            </div>
+          </div>
+
+          <div class="cyber-card pillar-card">
+            <div class="pillar-icon-box" style="color:var(--violet-core); border-color:rgba(99,102,241,0.3);">
+              <i data-lucide="database" style="width:24px;height:24px;"></i>
+            </div>
+            <div class="pillar-info">
+              <h4>Database & SQL Architecture</h4>
+              <p>Normalized relational schemas, ACID transactions, complex joins, triggers, and query performance tuning.</p>
+            </div>
+          </div>
+
+          <div class="cyber-card pillar-card">
+            <div class="pillar-icon-box" style="color:var(--emerald-core); border-color:rgba(5,150,105,0.3);">
+              <i data-lucide="sparkles" style="width:24px;height:24px;"></i>
+            </div>
+            <div class="pillar-info">
+              <h4>Machine Learning & Vision</h4>
+              <p>Model training, feature engineering, OpenCV face bounding, acoustic voice analysis, and predictive models.</p>
+            </div>
+          </div>
+
+          <div class="cyber-card pillar-card">
+            <div class="pillar-icon-box" style="color:var(--amber-core); border-color:rgba(217,119,6,0.3);">
+              <i data-lucide="users-2" style="width:24px;height:24px;"></i>
+            </div>
+            <div class="pillar-info">
+              <h4>IITM Event Coordinator & Leadership</h4>
+              <p>Orchestrating large-scale symposiums, participant logistics, cross-functional alignment, and crisis resolution.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Skills Matrix Section -->
+    <section id="skills" class="section-wrap">
+      <div class="section-head">
+        <span class="section-pre-title">// TELEMETRY ARSENAL</span>
+        <h2 class="section-title">TECHNICAL <span>CAPABILITIES</span></h2>
+        <p class="section-desc">Core competencies categorized by functional impact and proficiency levels.</p>
+      </div>
+
+      <div class="skills-filter-nav">
+        <button class="filter-chip skill-filter-chip active" data-filter="all">ALL CAPABILITIES</button>
+        <button class="filter-chip skill-filter-chip" data-filter="core">PROGRAMMING & DATA</button>
+        <button class="filter-chip skill-filter-chip" data-filter="ml">AI & ANALYTICS</button>
+        <button class="filter-chip skill-filter-chip" data-filter="tools">PRODUCTIVITY & ENTERPRISE</button>
+        <button class="filter-chip skill-filter-chip" data-filter="leadership">LEADERSHIP & DOMAIN</button>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Python -->
+        <div class="cyber-card skill-card" data-category="core">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon"><i data-lucide="terminal" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">Python</h4>
+                <span class="skill-category-tag">CORE ARCHITECTURE</span>
+              </div>
+            </div>
+            <span class="skill-pct">92%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 92%;"></div>
+          </div>
+          <p class="skill-desc">OOP, scripting, algorithms, OpenCV, data structures, and automation engines.</p>
+        </div>
+
+        <!-- SQL -->
+        <div class="cyber-card skill-card" data-category="core">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon"><i data-lucide="database" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">SQL</h4>
+                <span class="skill-category-tag">RELATIONAL DB</span>
+              </div>
+            </div>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 88%;"></div>
+          </div>
+          <p class="skill-desc">Relational schema design, complex joins, subqueries, normalization, and data handling.</p>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="cyber-card skill-card" data-category="ml">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon"><i data-lucide="cpu" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">Machine Learning</h4>
+                <span class="skill-category-tag">INTELLIGENCE</span>
+              </div>
+            </div>
+            <span class="skill-pct">82%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 82%;"></div>
+          </div>
+          <p class="skill-desc">Certified in ML paradigms: regression, classification models, evaluation, and data prep.</p>
+        </div>
+
+        <!-- Data Handling -->
+        <div class="cyber-card skill-card" data-category="ml">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon"><i data-lucide="bar-chart-3" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">Data Handling</h4>
+                <span class="skill-category-tag">DATA WRANGLING</span>
+              </div>
+            </div>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 85%;"></div>
+          </div>
+          <p class="skill-desc">ETL workflows, CSV/database ingestion, data cleaning, aggregation, and anomaly handling.</p>
+        </div>
+
+        <!-- MS Excel -->
+        <div class="cyber-card skill-card" data-category="tools">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon"><i data-lucide="table-2" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">MS Excel</h4>
+                <span class="skill-category-tag">ANALYTICAL MODELING</span>
+              </div>
+            </div>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 90%;"></div>
+          </div>
+          <p class="skill-desc">Pivot tables, nested VLOOKUP/XLOOKUP, formulas, financial models, and chart synthesis.</p>
+        </div>
+
+        <!-- Trading Fundamentals -->
+        <div class="cyber-card skill-card" data-category="leadership">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon"><i data-lucide="trending-up" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">Trading Fundamentals</h4>
+                <span class="skill-category-tag">FINANCIAL MARKETS</span>
+              </div>
+            </div>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 80%;"></div>
+          </div>
+          <p class="skill-desc">Market structure analysis, technical indicators, risk-to-reward ratios, and price action.</p>
+        </div>
+
+        <!-- Event Management & Coordination -->
+        <div class="cyber-card skill-card" data-category="leadership">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon"><i data-lucide="flag" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">Event Management</h4>
+                <span class="skill-category-tag">IITM LEADERSHIP</span>
+              </div>
+            </div>
+            <span class="skill-pct">95%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 95%;"></div>
+          </div>
+          <p class="skill-desc">Campus event operations at IIT Madras, participant hospitality, and contingency logistics.</p>
+        </div>
+
+        <!-- Communication & Enterprise Suite -->
+        <div class="cyber-card skill-card" data-category="tools">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon"><i data-lucide="presentation" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">MS Suite & Communication</h4>
+                <span class="skill-category-tag">PROFESSIONAL SUITE</span>
+              </div>
+            </div>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 90%;"></div>
+          </div>
+          <p class="skill-desc">High-impact PowerPoint pitch decks, Word executive documentation, and bilingual articulation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Holographic Projects Deck -->
+    <section id="projects" class="section-wrap">
+      <div class="section-head">
+        <span class="section-pre-title">// PRODUCTION WORKLOADS</span>
+        <h2 class="section-title">HOLOGRAPHIC <span>PROJECTS</span></h2>
+        <p class="section-desc">Interactive showcase of 5 production-grade applications engineered with Python, SQL, and AI.</p>
+      </div>
+
+      <div class="skills-filter-nav">
+        <button class="filter-chip project-filter-chip active" data-filter="all">ALL ARCHITECTURES</button>
+        <button class="filter-chip project-filter-chip" data-filter="ai">AI & COMPUTER VISION</button>
+        <button class="filter-chip project-filter-chip" data-filter="fullstack">FULL-STACK & PLATFORMS</button>
+        <button class="filter-chip project-filter-chip" data-filter="system">ENTERPRISE SYSTEMS & SQL</button>
+      </div>
+
+      <!-- Injected dynamically by js/main.js -->
+      <div id="projects-container" class="projects-grid"></div>
+    </section>
+
+    <!-- 5. Academic & Leadership Journey (Timeline) -->
+    <section id="journey" class="section-wrap">
+      <div class="section-head">
+        <span class="section-pre-title">// CHRONOLOGICAL PATHWAY</span>
+        <h2 class="section-title">IIT MADRAS <span>& MILESTONES</span></h2>
+        <p class="section-desc">Education, leadership roles, and certified achievements.</p>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline-line"></div>
+
+        <!-- Item 1: IIT Madras BS 2nd Year -->
+        <div class="timeline-item left">
+          <div class="timeline-node-pin"></div>
+          <div class="cyber-card timeline-content">
+            <div class="hud-corner-tl"></div>
+            <span class="timeline-year">2024 – PRESENT (2ND YEAR)</span>
+            <h3 class="timeline-heading">Bachelor of Science (BS)</h3>
+            <div class="timeline-org">Indian Institute of Technology Madras (IIT Madras)</div>
+            <p class="timeline-desc">
+              Currently in the 2nd Year of the prestigious BS degree program at IIT Madras. Maintaining a high academic standing with a <strong>CGPA of 8.25</strong>. Deep focus on programming, algorithmic computing, and data systems.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2: Event Coordinator at IIT Madras -->
+        <div class="timeline-item right">
+          <div class="timeline-node-pin"></div>
+          <div class="cyber-card timeline-content">
+            <div class="hud-corner-br"></div>
+            <span class="timeline-year">EXPERIENCE & LEADERSHIP</span>
+            <h3 class="timeline-heading">Event Coordinator</h3>
+            <div class="timeline-org">Indian Institute of Technology Madras</div>
+            <p class="timeline-desc">
+              Coordinated end-to-end event execution, participant management, schedule planning, and logistics across key IIT Madras campus initiatives, demonstrating exceptional teamwork and crisis mitigation skills.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3: Certifications -->
+        <div class="timeline-item left">
+          <div class="timeline-node-pin"></div>
+          <div class="cyber-card timeline-content">
+            <div class="hud-corner-tl"></div>
+            <span class="timeline-year">CREDENTIALS</span>
+            <h3 class="timeline-heading">Dual Tech Certifications</h3>
+            <div class="timeline-org">Accredited Technical Programs</div>
+            <p class="timeline-desc">
+              • <strong>Python Programming Certification:</strong> Verified competence in core structures, functions, OOP, and computational scripts.<br>
+              • <strong>Machine Learning Certification:</strong> Supervised training algorithms, model performance tuning, and predictive data pipelines.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4: High School & Intermediate -->
+        <div class="timeline-item right">
+          <div class="timeline-node-pin"></div>
+          <div class="cyber-card timeline-content">
+            <div class="hud-corner-br"></div>
+            <span class="timeline-year">FOUNDATIONS</span>
+            <h3 class="timeline-heading">Intermediate & High School (CBSE)</h3>
+            <div class="timeline-org">Jeevan Jyoti Public School</div>
+            <p class="timeline-desc">
+              Completed High School and Senior Secondary Intermediate education under the Central Board of Secondary Education (CBSE) with a solid science and analytical foundation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Interactive AI Terminal / OS Console -->
+    <section id="terminal" class="terminal-section">
+      <div class="section-head">
+        <span class="section-pre-title">// COMMAND CENTER</span>
+        <h2 class="section-title">INTERACTIVE <span>AI TERMINAL</span></h2>
+        <p class="section-desc">Query Abhay's knowledge base via real-time telemetry commands.</p>
+      </div>
+
+      <div class="terminal-shell">
+        <div class="terminal-bar">
+          <div class="terminal-dots">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+          </div>
+          <div class="terminal-title">abhay-ai-os@iitm: v2.5.0-quantum</div>
+          <div style="font-family:var(--font-mono); font-size:0.75rem; color:#38bdf8;">ONLINE [8.25 CGPA]</div>
+        </div>
+
+        <div class="terminal-viewport">
+          <div id="terminal-output" class="terminal-output">
+            <div class="t-line t-system">
+              [SYSTEM BOOT]: QUANTUM TELEMETRY CORE INITIALIZED.<br>
+              Welcome to Abhay Shukla's Terminal Interface (IIT Madras).<br>
+              Type '<span style="color:#38bdf8; font-weight:bold;">help</span>' to inspect available telemetry commands, or click any quick query below:
+            </div>
+          </div>
+          <div class="t-chip-row">
+            <button class="t-quick-chip" data-cmd="about">about</button>
+            <button class="t-quick-chip" data-cmd="projects">projects</button>
+            <button class="t-quick-chip" data-cmd="skills">skills</button>
+            <button class="t-quick-chip" data-cmd="iit">iit madras</button>
+            <button class="t-quick-chip" data-cmd="experience">experience</button>
+            <button class="t-quick-chip" data-cmd="hire">why hire Abhay?</button>
+            <button class="t-quick-chip" data-cmd="matrix">matrix</button>
+            <button class="t-quick-chip" data-cmd="contact">contact</button>
+            <button class="t-quick-chip" data-cmd="clear">clear</button>
+          </div>
+        </div>
+
+        <div class="terminal-input-row">
+          <span class="terminal-prompt-sym">abhay@iit-madras:~$</span>
+          <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command (e.g. 'hire', 'projects', 'skills') and press Enter..." autocomplete="off" spellcheck="false">
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Transmission / Contact Section -->
+    <section id="contact" class="section-wrap">
+      <div class="section-head">
+        <span class="section-pre-title">// RELAY TELEMETRY</span>
+        <h2 class="section-title">TRANSMIT <span>A SIGNAL</span></h2>
+        <p class="section-desc">Open for internships, entry-level engineering roles, and innovative collaborations.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="cyber-card contact-card-side">
+          <div class="hud-corner-tl"></div>
+          <div>
+            <h3 style="font-family:var(--font-display); font-size:1.5rem; font-weight:800; color:var(--text-main); margin-bottom:12px;">DIRECT CHANNELS</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.6;">
+              Whether you are a recruiter seeking an energetic IIT Madras builder, a company organizing placement drives, or looking to collaborate on AI and backend systems, feel free to reach out directly.
+            </p>
+
+            <div class="contact-channels">
+              <!-- College Email ID -->
+              <div class="contact-channel-item">
+                <div class="channel-info">
+                  <i data-lucide="graduation-cap" class="channel-icon"></i>
+                  <div>
+                    <span style="font-size:0.75rem; color:var(--text-dim); display:block; font-family:var(--font-mono); font-weight:600;">OFFICIAL COLLEGE RELAY</span>
+                    <span class="channel-text-val">24f3002105@ds.study.iitm.ac.in</span>
+                  </div>
+                </div>
+                <button class="copy-channel-btn" data-copy="24f3002105@ds.study.iitm.ac.in" title="Copy College Email">
+                  <i data-lucide="copy" style="width:16px;height:16px;"></i>
+                </button>
+              </div>
+
+              <!-- Personal Email ID -->
+              <div class="contact-channel-item">
+                <div class="channel-info">
+                  <i data-lucide="mail" class="channel-icon"></i>
+                  <div>
+                    <span style="font-size:0.75rem; color:var(--text-dim); display:block; font-family:var(--font-mono); font-weight:600;">PERSONAL RELAY</span>
+                    <span class="channel-text-val">abhayshukla11487@gmail.com</span>
+                  </div>
+                </div>
+                <button class="copy-channel-btn" data-copy="abhayshukla11487@gmail.com" title="Copy Personal Email">
+                  <i data-lucide="copy" style="width:16px;height:16px;"></i>
+                </button>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-channel-item">
+                <div class="channel-info">
+                  <i data-lucide="map-pin" class="channel-icon"></i>
+                  <div>
+                    <span style="font-size:0.75rem; color:var(--text-dim); display:block; font-family:var(--font-mono); font-weight:600;">BASE STATION</span>
+                    <span class="channel-text-val">IIT Madras, Chennai // Open to Pan-India / Remote</span>
+                  </div>
+                </div>
+                <button class="copy-channel-btn" data-copy="IIT Madras, Chennai" title="Copy Location">
+                  <i data-lucide="copy" style="width:16px;height:16px;"></i>
+                </button>
+              </div>
+
+              <!-- Status -->
+              <div class="contact-channel-item">
+                <div class="channel-info">
+                  <i data-lucide="radio" class="channel-icon" style="color:var(--emerald-core);"></i>
+                  <div>
+                    <span style="font-size:0.75rem; color:var(--text-dim); display:block; font-family:var(--font-mono); font-weight:600;">AVAILABILITY STATUS</span>
+                    <span class="channel-text-val" style="color:var(--emerald-core);">Actively Interviewing for Internships & Roles</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:12px;">
+            <button class="cyber-btn cyber-btn-primary resume-download-trigger" style="flex:1;">
+              <i data-lucide="file-text" style="width:16px;height:16px;"></i>
+              Download Dossier
+            </button>
+          </div>
+        </div>
+
+        <div class="cyber-card contact-form-side">
+          <div class="hud-corner-br"></div>
+          <h3 style="font-family:var(--font-display); font-size:1.5rem; font-weight:800; color:var(--text-main); margin-bottom:12px;">TRANSMISSION FORM</h3>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Send a message packet directly to Abhay's comms link.</p>
+
+          <form id="cyber-contact-form" class="cyber-form">
+            <div class="form-field-group">
+              <label class="field-label" for="sender-name">Transmitter Name</label>
+              <input type="text" id="sender-name" class="cyber-input" placeholder="Your Name or Organization" required>
+            </div>
+
+            <div class="form-field-group">
+              <label class="field-label" for="sender-email">Transmitter Email / Contact</label>
+              <input type="email" id="sender-email" class="cyber-input" placeholder="recruiter@company.com" required>
+            </div>
+
+            <div class="form-field-group">
+              <label class="field-label" for="sender-msg">Payload Message</label>
+              <textarea id="sender-msg" class="cyber-textarea" placeholder="State your opportunity, role requirements, or collaboration idea..." required></textarea>
+            </div>
+
+            <button type="submit" class="cyber-btn cyber-btn-primary" style="width:100%;">
+              <i data-lucide="send" style="width:16px;height:16px;"></i>
+              Transmit Message Packet
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cyber Footer HUD -->
+  <footer class="cyber-footer">
+    <div class="content-wrapper">
+      <div class="footer-top-row">
+        <div class="telemetry-status-bar">
+          <div class="telemetry-item">
+            <i data-lucide="activity" style="width:14px;height:14px;color:var(--emerald-core);"></i>
+            <span>CORE STATUS: NOMINAL</span>
+          </div>
+          <div class="telemetry-item">
+            <i data-lucide="zap" style="width:14px;height:14px;color:var(--cyan-core);"></i>
+            <span>LATENCY: <span id="telemetry-latency">11ms</span></span>
+          </div>
+          <div class="telemetry-item">
+            <i data-lucide="clock" style="width:14px;height:14px;color:var(--violet-core);"></i>
+            <span id="telemetry-clock">00:00:00 UTC+5.5</span>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/abhayshukla" target="_blank" rel="noopener" class="social-link" title="GitHub">
+            <i data-lucide="github" style="width:18px;height:18px;"></i>
+          </a>
+          <a href="https://linkedin.com/in/abhayshukla" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+            <i data-lucide="linkedin" style="width:18px;height:18px;"></i>
+          </a>
+          <a href="mailto:abhayshukla11487@gmail.com" class="social-link" title="Personal Email">
+            <i data-lucide="mail" style="width:18px;height:18px;"></i>
+          </a>
+          <a href="mailto:24f3002105@ds.study.iitm.ac.in" class="social-link" title="College Email">
+            <i data-lucide="graduation-cap" style="width:18px;height:18px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>
+          © 2026 Abhay Shukla. Built with Quantum 3D WebGL, Three.js & Cybernetic Standards.
+        </div>
+        <div style="color:var(--cyan-core); font-weight:700;">
+          BS 2nd Year // IIT Madras
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Blueprint Deep Dive Modal -->
+  <div id="project-modal-overlay" class="cyber-modal-overlay">
+    <div class="cyber-modal">
+      <button id="modal-close-btn" class="modal-close-btn" title="Close Blueprint">
+        <i data-lucide="x" style="width:20px;height:20px;"></i>
+      </button>
+      <div id="project-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Floating HUD Quick Launcher -->
+  <div class="floating-hud">
+    <button class="hud-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" title="Propulsion to Orbit (Top)">
+      <i data-lucide="arrow-up" style="width:20px;height:20px;"></i>
+    </button>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="js/sound-fx.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/projects-data.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
