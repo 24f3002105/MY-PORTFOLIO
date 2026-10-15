@@ -1,10 +1,11 @@
 /**
- * ABHAY SHUKLA - CORE CONTROLLER & INTERACTION ENGINE
- * Manages UI animations, 3D card tilts, modals, filtering & events
+ * ABHAY SHUKLA - CORE CONTROLLER & INTERACTION ENGINE (v2.2 Mobile-Optimized)
+ * Manages UI animations, mobile menu drawer, 3D card tilts, modals, filtering & events
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initCustomCursor();
+  initMobileMenu();
   initHeroTypewriter();
   initAudioToggle();
   initProjectsDeck();
@@ -17,9 +18,39 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* -------------------------------------------------------------
- * 1. Futuristic Custom Cursor
+ * 1. Mobile Navigation Drawer Toggle
+ * ----------------------------------------------------------- */
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const drawer = document.getElementById('mobile-nav-drawer');
+  const links = document.querySelectorAll('.mobile-nav-link');
+
+  if (!toggleBtn || !drawer) return;
+
+  toggleBtn.addEventListener('click', () => {
+    drawer.classList.toggle('open');
+    if (window.soundEngine) window.soundEngine.playClick();
+  });
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      drawer.classList.remove('open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!drawer.contains(e.target) && !toggleBtn.contains(e.target) && drawer.classList.contains('open')) {
+      drawer.classList.remove('open');
+    }
+  });
+}
+
+/* -------------------------------------------------------------
+ * 2. Futuristic Custom Cursor (Desktop Only)
  * ----------------------------------------------------------- */
 function initCustomCursor() {
+  if (window.innerWidth < 768) return;
+
   const dot = document.querySelector('.custom-cursor-dot');
   const ring = document.querySelector('.custom-cursor-ring');
 
@@ -44,7 +75,6 @@ function initCustomCursor() {
   }
   renderRing();
 
-  // Hover states on clickable elements
   const interactives = document.querySelectorAll('a, button, input, textarea, .cyber-card, .t-quick-chip, .filter-chip');
   interactives.forEach(el => {
     el.addEventListener('mouseenter', () => {
@@ -61,7 +91,7 @@ function initCustomCursor() {
 }
 
 /* -------------------------------------------------------------
- * 2. Hero Animated Typewriter
+ * 3. Hero Animated Typewriter
  * ----------------------------------------------------------- */
 function initHeroTypewriter() {
   const el = document.getElementById('typewriter-text');
@@ -69,10 +99,10 @@ function initHeroTypewriter() {
 
   const phrases = [
     'IIT Madras BS Student // CGPA 8.25',
-    'Python & SQL Systems Architect',
+    'Python, JS, Vue & Java Developer',
     'AI & Computer Vision Builder',
-    'Event Coordinator & Tech Leader',
-    'Ready for High-Impact Roles & Internships'
+    'Linux & SQL Systems Architect',
+    'Event Coordinator & Tech Leader'
   ];
 
   let phraseIdx = 0;
@@ -90,7 +120,7 @@ function initHeroTypewriter() {
     } else {
       el.textContent = current.substring(0, charIdx + 1);
       charIdx++;
-      delay = 90;
+      delay = 85;
     }
 
     if (!isDeleting && charIdx === current.length) {
@@ -109,7 +139,7 @@ function initHeroTypewriter() {
 }
 
 /* -------------------------------------------------------------
- * 3. Audio Telemetry Toggle
+ * 4. Audio Telemetry Toggle
  * ----------------------------------------------------------- */
 function initAudioToggle() {
   const toggleBtn = document.getElementById('audio-toggle-btn');
@@ -131,7 +161,7 @@ function initAudioToggle() {
 }
 
 /* -------------------------------------------------------------
- * 4. Holographic Projects Deck & Deep Dive Modal
+ * 5. Holographic Projects Deck & Deep Dive Modal
  * ----------------------------------------------------------- */
 function initProjectsDeck() {
   const container = document.getElementById('projects-container');
@@ -169,7 +199,7 @@ function initProjectsDeck() {
             <button class="p-icon-btn deep-dive-trigger" data-id="${p.id}" title="Deep Dive Architecture">
               <i data-lucide="scan" style="width:16px;height:16px;"></i>
             </button>
-            <a href="${p.github}" target="_blank" rel="noopener" class="p-icon-btn" title="View Source">
+            <a href="https://github.com/24f3002105/MY-PORTFOLIO" target="_blank" rel="noopener" class="p-icon-btn" title="View Source">
               <i data-lucide="github" style="width:16px;height:16px;"></i>
             </a>
           </div>
@@ -213,7 +243,7 @@ function initProjectsDeck() {
 }
 
 /* -------------------------------------------------------------
- * 5. Deep Dive Architecture Modal
+ * 6. Deep Dive Architecture Modal
  * ----------------------------------------------------------- */
 function attachModalTriggers() {
   const modalOverlay = document.getElementById('project-modal-overlay');
@@ -231,42 +261,42 @@ function attachModalTriggers() {
       modalBody.innerHTML = `
         <div style="margin-bottom: 24px;">
           <span class="project-badge ${project.category}" style="display:inline-block; margin-bottom: 8px;">${project.badge}</span>
-          <h2 style="font-family:var(--font-display); font-size: 1.8rem; color:#fff; margin-bottom:8px;">${project.title}</h2>
-          <p style="color:var(--text-muted); font-size:1rem; line-height:1.6;">${project.summary}</p>
+          <h2 style="font-family:var(--font-display); font-size: 1.6rem; color:var(--text-main); margin-bottom:8px;">${project.title}</h2>
+          <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.6;">${project.summary}</p>
         </div>
 
-        <div style="background:rgba(0,240,255,0.04); border:1px solid var(--border-cyber); border-radius:8px; padding:20px; margin-bottom:24px;">
-          <h4 style="font-family:var(--font-mono); font-size:0.85rem; color:var(--cyan-core); text-transform:uppercase; margin-bottom:12px;">
+        <div style="background:rgba(2,132,199,0.06); border:1px solid var(--border-cyber); border-radius:8px; padding:18px; margin-bottom:20px;">
+          <h4 style="font-family:var(--font-mono); font-size:0.82rem; color:var(--cyan-core); text-transform:uppercase; margin-bottom:10px; font-weight:700;">
             // ARCHITECTURAL DATA FLOW PIPELINE
           </h4>
-          <div style="display:flex; flex-direction:column; gap:12px; font-family:var(--font-mono); font-size:0.85rem;">
-            <div><strong style="color:#fff;">[INPUT LAYER]:</strong> <span style="color:#cbd5e1;">${project.architecture.input}</span></div>
-            <div><strong style="color:var(--cyan-core);">[PROCESSING]:</strong> <span style="color:#cbd5e1;">${project.architecture.pipeline}</span></div>
-            <div><strong style="color:var(--emerald-core);">[DISPATCH/OUTPUT]:</strong> <span style="color:#cbd5e1;">${project.architecture.output}</span></div>
+          <div style="display:flex; flex-direction:column; gap:10px; font-family:var(--font-mono); font-size:0.85rem;">
+            <div><strong style="color:var(--text-main);">[INPUT LAYER]:</strong> <span style="color:var(--text-secondary);">${project.architecture.input}</span></div>
+            <div><strong style="color:var(--cyan-core);">[PROCESSING]:</strong> <span style="color:var(--text-secondary);">${project.architecture.pipeline}</span></div>
+            <div><strong style="color:var(--emerald-core);">[DISPATCH/OUTPUT]:</strong> <span style="color:var(--text-secondary);">${project.architecture.output}</span></div>
           </div>
         </div>
 
-        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-bottom:24px;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:12px; margin-bottom:20px;">
           ${Object.entries(project.metrics).map(([k, v]) => `
-            <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:12px; border-radius:6px; text-align:center;">
-              <span style="font-family:var(--font-display); font-size:1.2rem; font-weight:800; color:#fff; display:block;">${v}</span>
-              <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--text-dim); text-transform:uppercase;">${k}</span>
+            <div style="background:#f8fafc; border:1px solid var(--border-card); padding:10px; border-radius:6px; text-align:center;">
+              <span style="font-family:var(--font-display); font-size:1.15rem; font-weight:800; color:var(--text-main); display:block;">${v}</span>
+              <span style="font-family:var(--font-mono); font-size:0.68rem; color:var(--text-dim); text-transform:uppercase; font-weight:600;">${k}</span>
             </div>
           `).join('')}
         </div>
 
-        <h4 style="font-family:var(--font-mono); font-size:0.85rem; color:#fff; margin-bottom:12px;">KEY TECHNICAL HIGHLIGHTS:</h4>
-        <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:28px;">
+        <h4 style="font-family:var(--font-mono); font-size:0.85rem; color:var(--text-main); margin-bottom:10px; font-weight:700;">KEY TECHNICAL HIGHLIGHTS:</h4>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:24px;">
           ${project.highlights.map(h => `
-            <li style="display:flex; align-items:flex-start; gap:8px; font-size:0.9rem; color:#cbd5e1;">
+            <li style="display:flex; align-items:flex-start; gap:8px; font-size:0.88rem; color:var(--text-secondary);">
               <span style="color:var(--cyan-core);">▶</span> <span>${h}</span>
             </li>
           `).join('')}
         </ul>
 
-        <div style="display:flex; justify-content:flex-end; gap:14px;">
-          <a href="${project.github}" target="_blank" rel="noopener" class="cyber-btn cyber-btn-secondary">
-            <i data-lucide="github" style="width:16px;height:16px;"></i> View Repository
+        <div style="display:flex; justify-content:flex-end; gap:12px; flex-wrap:wrap;">
+          <a href="https://github.com/24f3002105/MY-PORTFOLIO" target="_blank" rel="noopener" class="cyber-btn cyber-btn-secondary">
+            <i data-lucide="github" style="width:16px;height:16px;"></i> Repository
           </a>
           <button class="cyber-btn cyber-btn-primary" onclick="document.getElementById('project-modal-overlay').classList.remove('open')">
             Close Blueprint
@@ -294,9 +324,11 @@ function attachModalTriggers() {
 }
 
 /* -------------------------------------------------------------
- * 6. Interactive 3D Card Tilts (Gyro & Mouse)
+ * 7. Interactive 3D Card Tilts (Desktop Only)
  * ----------------------------------------------------------- */
 function init3DCardTilts() {
+  if (window.innerWidth < 768) return;
+
   const cards = document.querySelectorAll('.cyber-card, .holo-card-center');
 
   cards.forEach(card => {
@@ -308,8 +340,8 @@ function init3DCardTilts() {
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      const rotateX = ((y - centerY) / centerY) * -6;
-      const rotateY = ((x - centerX) / centerX) * 6;
+      const rotateX = ((y - centerY) / centerY) * -5;
+      const rotateY = ((x - centerX) / centerX) * 5;
 
       card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
     });
@@ -321,7 +353,7 @@ function init3DCardTilts() {
 }
 
 /* -------------------------------------------------------------
- * 7. Skills Interactive Filtering
+ * 8. Skills Interactive Filtering
  * ----------------------------------------------------------- */
 function initSkillsInteractions() {
   const filterChips = document.querySelectorAll('.skill-filter-chip');
@@ -347,7 +379,7 @@ function initSkillsInteractions() {
           card.style.transform = 'translateY(10px)';
           setTimeout(() => {
             card.style.display = 'none';
-          }, 250);
+          }, 200);
         }
       });
     });
@@ -355,7 +387,7 @@ function initSkillsInteractions() {
 }
 
 /* -------------------------------------------------------------
- * 8. Contact Transmission System & Clipboard
+ * 9. Contact Transmission System (Direct Email Forwarding)
  * ----------------------------------------------------------- */
 function initContactSystem() {
   // Direct channel copy buttons
@@ -371,31 +403,69 @@ function initContactSystem() {
     });
   });
 
-  // Simulated transmission form
+  // Contact Form with Email Forwarding
   const form = document.getElementById('cyber-contact-form');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const nameInput = document.getElementById('sender-name');
-      const emailInput = document.getElementById('sender-email');
-      const messageInput = document.getElementById('sender-msg');
+  const submitBtn = document.getElementById('submit-btn');
 
-      const name = nameInput.value || 'Fellow Innovator';
-      
-      showToast(`TRANSMISSION RECEIVED FROM ${name.toUpperCase()}! RELAYING TO ABHAY...`);
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('sender-name').value.trim();
+      const email = document.getElementById('sender-email').value.trim();
+      const msg = document.getElementById('sender-msg').value.trim();
+
+      const origBtnHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span>Transmitting to Abhay's Inbox...</span>`;
+
+      try {
+        // Direct integration with free Formspree / Web3Forms mail forwarding
+        // Fallback opens user mail client directly if offline
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: '56653248-c8a7-47b7-bd20-22c608034b73', // Free tier public relay key
+            name: name,
+            email: email,
+            message: msg,
+            subject: `New Portfolio Message from ${name} (${email})`
+          })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          showToast(`SUCCESS! MESSAGE DELIVERED DIRECTLY TO ABHAY'S GMAIL.`);
+        } else {
+          // Open direct mailto fallback
+          window.location.href = `mailto:abhayshukla11487@gmail.com?subject=Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(msg + '\n\nSender Email: ' + email)}`;
+          showToast(`OPENED EMAIL CLIENT TO TRANSMIT TO ABHAY!`);
+        }
+      } catch (err) {
+        // Fallback to mailto
+        window.location.href = `mailto:abhayshukla11487@gmail.com?subject=Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(msg + '\n\nSender Email: ' + email)}`;
+        showToast(`TRANSMISSION LINK PREPARED TO ABHAY'S GMAIL!`);
+      }
+
       if (window.soundEngine) window.soundEngine.playActivate();
 
-      // Confetti burst
       if (typeof confetti === 'function') {
         confetti({
           particleCount: 80,
           spread: 70,
           origin: { y: 0.75 },
-          colors: ['#00f0ff', '#8b5cf6', '#10b981']
+          colors: ['#0284c7', '#6366f1', '#059669']
         });
       }
 
       form.reset();
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = origBtnHtml;
+      initLucideIcons();
     });
   }
 
@@ -404,10 +474,10 @@ function initContactSystem() {
   resumeBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      showToast('GENERATING ENCRYPTED DOSSIER // RESUME PACKET...');
+      showToast('GENERATING DOSSIER // RESUME PRINT VIEW...');
       if (typeof confetti === 'function') {
         confetti({
-          particleCount: 60,
+          particleCount: 50,
           spread: 60,
           origin: { y: 0.6 }
         });
@@ -420,7 +490,7 @@ function initContactSystem() {
 }
 
 /* -------------------------------------------------------------
- * 9. Telemetry Live Clock & Latency
+ * 10. Telemetry Live Clock & Latency
  * ----------------------------------------------------------- */
 function initTelemetryClock() {
   const clockEl = document.getElementById('telemetry-clock');
@@ -436,17 +506,16 @@ function initTelemetryClock() {
   update();
   setInterval(update, 1000);
 
-  // Random realistic low latency simulation (8-16ms)
   if (latencyEl) {
     setInterval(() => {
-      const ms = Math.floor(Math.random() * 8) + 8;
+      const ms = Math.floor(Math.random() * 6) + 8;
       latencyEl.textContent = `${ms}ms`;
     }, 4000);
   }
 }
 
 /* -------------------------------------------------------------
- * 10. Toast Notification System
+ * 11. Toast Notification System
  * ----------------------------------------------------------- */
 function showToast(message) {
   let toast = document.querySelector('.cyber-toast');
@@ -465,11 +534,11 @@ function showToast(message) {
   toast.classList.add('show');
   setTimeout(() => {
     toast.classList.remove('show');
-  }, 3500);
+  }, 4000);
 }
 
 /* -------------------------------------------------------------
- * 11. Lucide Icons helper
+ * 12. Lucide Icons helper
  * ----------------------------------------------------------- */
 function initLucideIcons() {
   if (typeof lucide !== 'undefined' && lucide.createIcons) {
@@ -478,7 +547,7 @@ function initLucideIcons() {
 }
 
 /* -------------------------------------------------------------
- * 12. Smooth Scroll & Entrance Animations (GSAP or Fallback)
+ * 13. Smooth Scroll & Entrance Animations (GSAP or Fallback)
  * ----------------------------------------------------------- */
 function initScrollAnimations() {
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
@@ -488,10 +557,10 @@ function initScrollAnimations() {
       gsap.from(head, {
         scrollTrigger: {
           trigger: head,
-          start: 'top 85%'
+          start: 'top 88%'
         },
         opacity: 0,
-        y: 35,
+        y: 30,
         duration: 0.8,
         ease: 'power3.out'
       });
@@ -501,11 +570,11 @@ function initScrollAnimations() {
       gsap.from(item, {
         scrollTrigger: {
           trigger: item,
-          start: 'top 85%'
+          start: 'top 88%'
         },
         opacity: 0,
-        x: item.classList.contains('left') ? -40 : 40,
-        duration: 0.9,
+        x: item.classList.contains('left') ? -30 : 30,
+        duration: 0.8,
         ease: 'power3.out'
       });
     });

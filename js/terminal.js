@@ -104,12 +104,12 @@ class CyberTerminal {
     <span style="color:#38bdf8; font-weight:700;">AVAILABLE OS COMMANDS:</span><br>
     - <b style="color:#fff;">about</b> : View Abhay's bio & career objective<br>
     - <b style="color:#fff;">projects</b> : Inspect all 5 advanced projects & metrics<br>
-    - <b style="color:#fff;">skills</b> : Review Python, SQL, ML, & analytical toolstack<br>
+    - <b style="color:#fff;">skills</b> : Review Python, JS, Vue, Java, Linux, SQL & toolstack<br>
     - <b style="color:#fff;">iit</b> : Educational trajectory at IIT Madras (CGPA 8.25)<br>
     - <b style="color:#fff;">experience</b> : Leadership as Event Coordinator at IIT Madras<br>
     - <b style="color:#fff;">certifications</b> : Python & Machine Learning accredited credentials<br>
     - <b style="color:#fff;">hire</b> : Why Abhay is an exceptional addition to your engineering team<br>
-    - <b style="color:#fff;">contact</b> : Transmission coordinates & instant copy<br>
+    - <b style="color:#fff;">contact</b> : Transmission coordinates, emails & LinkedIn<br>
     - <b style="color:#fff;">matrix</b> : Run Matrix quantum visual telemetry<br>
     - <b style="color:#fff;">clear</b> : Wipe terminal viewport
     `;
@@ -120,7 +120,8 @@ class CyberTerminal {
     this.printLine(`
     <b style="color:#38bdf8;">[IDENTIFICATION]:</b> Abhay Shukla<br>
     <b style="color:#fff;">[STATUS]:</b> 2nd Year Bachelor of Science (BS) @ IIT Madras | CGPA: 8.25<br>
-    <b style="color:#fff;">[OBJECTIVE]:</b> Motivated tech student and fresher with strong foundations in Python, SQL, and data handling. Seeking an entry-level role or internship where I can apply technical skills, problem-solving capability, and project experience to contribute to organizational growth while learning cutting-edge technologies.
+    <b style="color:#fff;">[STACK]:</b> Python, JavaScript, Vue.js, Java, Linux, SQL, Machine Learning<br>
+    <b style="color:#fff;">[OBJECTIVE]:</b> Motivated tech student and software developer. Seeking an entry-level role or internship where I can apply technical skills, problem-solving capability, and project experience to contribute to organizational growth while continuously mastering cutting-edge technologies.
     `);
   }
 
@@ -139,11 +140,13 @@ class CyberTerminal {
   cmdSkills() {
     this.printLine(`
     <b style="color:#38bdf8;">[TECHNICAL TELEMETRY MATRIX]:</b><br>
-    • <b style="color:#fff;">Programming:</b> Python (Advanced, Object-Oriented, Scripting, Automation)<br>
-    • <b style="color:#fff;">Databases & Queries:</b> SQL (Relational Schema, Joins, Triggers, Views, Normalization)<br>
-    • <b style="color:#fff;">AI & Data Science:</b> Machine Learning, Computer Vision Concepts, Data Handling<br>
+    • <b style="color:#fff;">Programming Languages:</b> Python (OOP, Automation), JavaScript (ES6+, Async), Java (Core, Collections)<br>
+    • <b style="color:#fff;">Frontend & Web:</b> Vue.js (SPA, Reactivity), HTML5, CSS3, Jinja / Jinja2 Templating<br>
+    • <b style="color:#fff;">Systems & OS:</b> Linux (CLI navigation, Bash scripting, process/file management), Git & GitHub<br>
+    • <b style="color:#fff;">Databases & SQL:</b> Relational Schema, Joins, Triggers, Views, Normalization<br>
+    • <b style="color:#fff;">AI & Data Science:</b> Machine Learning Certified, OpenCV Computer Vision, Data Handling<br>
     • <b style="color:#fff;">Enterprise Tools:</b> MS Excel (Advanced Modeling), MS Word, MS PowerPoint<br>
-    • <b style="color:#fff;">Domain Competencies:</b> Trading Fundamentals, Event Management, Technical Communication
+    • <b style="color:#fff;">Domain Competencies:</b> Trading Fundamentals, Event Coordination, Technical Communication
     `);
   }
 
@@ -180,9 +183,10 @@ class CyberTerminal {
     this.printLine(`
     <b style="color:#38bdf8;">[WHY HIRE ABHAY SHUKLA?]:</b><br>
     1. <b style="color:#fff;">IIT Madras Pedigree & High Academic Discipline:</b> Solid 8.25 CGPA reflecting rigorous problem-solving rigor.<br>
-    2. <b style="color:#fff;">End-to-End Builder Mindset:</b> Not just theoretical knowledge — demonstrated through 5 substantial systems in AI, multi-tenant web platforms, and database engineering.<br>
-    3. <b style="color:#fff;">Bridge of Tech & Leadership:</b> Proven coordination prowess as IITM Event Coordinator paired with strong communication in Hindi & English.<br>
-    4. <b style="color:#fff;">Rapid Adaptability:</b> Fast learner with passion for continuous tech stack mastery.
+    2. <b style="color:#fff;">Versatile Modern Tech Stack:</b> Proven across Python, JavaScript, Vue.js, Java, Linux, and SQL.<br>
+    3. <b style="color:#fff;">End-to-End Builder Mindset:</b> Demonstrated through 5 substantial systems in AI, multi-tenant web platforms, and database engineering.<br>
+    4. <b style="color:#fff;">Bridge of Tech & Leadership:</b> Proven coordination prowess as IITM Event Coordinator paired with strong communication.<br>
+    5. <b style="color:#fff;">Rapid Adaptability:</b> Fast learner with passion for continuous tech stack mastery.
     `);
   }
 
@@ -190,12 +194,12 @@ class CyberTerminal {
     this.printLine(`
     <b style="color:#38bdf8;">[TRANSMISSION RELAY & DIRECT CHANNELS]:</b><br>
     • <b style="color:#fff;">Name:</b> Abhay Shukla<br>
-    • <b style="color:#fff;">College Email:</b> <a href="mailto:24f3002105@ds.study.iitm.ac.in" style="color:#38bdf8;">24f3002105@ds.study.iitm.ac.in</a><br>
+    • <b style="color:#fff;">LinkedIn:</b> <a href="https://www.linkedin.com/in/abhay-shukla7379" target="_blank" style="color:#38bdf8;">linkedin.com/in/abhay-shukla7379</a><br>
     • <b style="color:#fff;">Personal Email:</b> <a href="mailto:abhayshukla11487@gmail.com" style="color:#38bdf8;">abhayshukla11487@gmail.com</a><br>
+    • <b style="color:#fff;">College Email:</b> <a href="mailto:24f3002105@ds.study.iitm.ac.in" style="color:#38bdf8;">24f3002105@ds.study.iitm.ac.in</a><br>
     • <b style="color:#fff;">Institution:</b> IIT Madras (BS 2nd Year, CGPA 8.25)<br>
-    • <b style="color:#fff;">Base Station:</b> Chennai / Open to Remote & Pan-India relocation<br>
-    • <b style="color:#34d399;">Status:</b> Actively Interviewing for Internships & Entry-Level Roles<br>
-    <i>Use the Transmit Terminal below to send a direct message!</i>
+    • <b style="color:#fff;">Base Station:</b> Chennai // Open to Remote & Pan-India<br>
+    • <b style="color:#34d399;">Status:</b> Actively Interviewing for Internships & Entry-Level Roles
     `);
   }
 

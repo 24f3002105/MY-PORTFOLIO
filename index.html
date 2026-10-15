@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Abhay Shukla | Futuristic Portfolio // IIT Madras</title>
-  <meta name="description" content="Official portfolio of Abhay Shukla - IIT Madras BS Student, Python & SQL Systems Architect, Machine Learning & AI Builder.">
+  <meta name="description" content="Official portfolio of Abhay Shukla - IIT Madras BS Student, Python, JavaScript, Vue.js, SQL Systems Architect, Machine Learning & AI Builder.">
   <meta name="theme-color" content="#f8fafc">
 
   <!-- Favicon / Cyber Icon -->
@@ -47,6 +47,7 @@
         <span class="logo-text">ABHAY<span>.OS</span></span>
       </a>
 
+      <!-- Desktop Nav Links -->
       <ul class="nav-links">
         <li><a href="#hero" class="active">CORE</a></li>
         <li><a href="#about">DOSSIER</a></li>
@@ -57,19 +58,36 @@
         <li><a href="#contact">TRANSMIT</a></li>
       </ul>
 
+      <!-- Controls & Actions -->
       <div class="nav-controls">
         <button id="audio-toggle-btn" class="audio-toggle-btn muted" title="Enable Cyber Audio Telemetry">
           <div class="audio-waves">
             <span></span><span></span><span></span>
           </div>
-          <span>AUDIO FX</span>
+          <span>AUDIO</span>
         </button>
 
-        <a href="#contact" class="cyber-btn cyber-btn-primary resume-download-trigger" style="padding: 8px 18px; font-size: 0.78rem;">
+        <a href="#contact" class="cyber-btn cyber-btn-primary resume-download-trigger" style="padding: 7px 14px; font-size: 0.78rem;">
           <i data-lucide="file-down" style="width:14px;height:14px;"></i>
           <span>RESUME</span>
         </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" title="Toggle Navigation Menu">
+          <i data-lucide="menu" style="width:20px;height:20px;"></i>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+      <a href="#hero" class="mobile-nav-link"><i data-lucide="home" style="width:18px;height:18px;"></i> CORE</a>
+      <a href="#about" class="mobile-nav-link"><i data-lucide="user" style="width:18px;height:18px;"></i> DOSSIER</a>
+      <a href="#skills" class="mobile-nav-link"><i data-lucide="cpu" style="width:18px;height:18px;"></i> SKILLS</a>
+      <a href="#projects" class="mobile-nav-link"><i data-lucide="layers" style="width:18px;height:18px;"></i> HOLO-DECK</a>
+      <a href="#journey" class="mobile-nav-link"><i data-lucide="milestone" style="width:18px;height:18px;"></i> JOURNEY</a>
+      <a href="#terminal" class="mobile-nav-link"><i data-lucide="terminal" style="width:18px;height:18px;"></i> AI TERMINAL</a>
+      <a href="#contact" class="mobile-nav-link"><i data-lucide="send" style="width:18px;height:18px;"></i> TRANSMIT</a>
     </div>
   </header>
 
@@ -96,7 +114,7 @@
           </div>
 
           <p class="hero-bio">
-            Motivated tech student & engineer pursuing a <strong>Bachelor of Science (BS) at IIT Madras</strong> with an <strong>8.25 CGPA</strong>. Specialized in Python architectures, relational SQL systems, machine learning pipelines, and production-grade full-stack ecosystems.
+            Motivated tech student & software engineer pursuing a <strong>Bachelor of Science (BS) at IIT Madras</strong> with an <strong>8.25 CGPA</strong>. Proficient in Python, JavaScript, Vue.js, Java, Linux, and relational SQL architectures, building production-grade AI & full-stack systems.
           </p>
 
           <div class="hero-actions">
@@ -106,11 +124,11 @@
             </a>
             <a href="#terminal" class="cyber-btn cyber-btn-secondary">
               <i data-lucide="terminal" style="width:16px;height:16px;"></i>
-              <span>LAUNCH AI TERMINAL</span>
+              <span>AI TERMINAL</span>
             </a>
-            <a href="#contact" class="cyber-btn cyber-btn-secondary">
-              <i data-lucide="send" style="width:16px;height:16px;"></i>
-              <span>GET IN TOUCH</span>
+            <a href="https://www.linkedin.com/in/abhay-shukla7379" target="_blank" rel="noopener" class="cyber-btn cyber-btn-secondary">
+              <i data-lucide="linkedin" style="width:16px;height:16px;"></i>
+              <span>LINKEDIN</span>
             </a>
           </div>
 
@@ -125,8 +143,8 @@
               <span class="stat-label">PRODUCTION SYSTEMS</span>
             </div>
             <div class="stat-chip">
-              <span class="stat-val accent">2x</span>
-              <span class="stat-label">CERTIFIED (PY & ML)</span>
+              <span class="stat-val accent">10+</span>
+              <span class="stat-label">LANGUAGES & TOOLS</span>
             </div>
           </div>
         </div>
@@ -135,21 +153,6 @@
         <div class="hero-hologram-wrap">
           <div class="holo-circle-ring"></div>
           <div class="holo-circle-ring inner"></div>
-
-          <div class="holo-orbit-badge badge-top-left">
-            <i data-lucide="shield-check" style="width:14px;height:14px;color:var(--emerald-core);"></i>
-            <span>IIT Madras 2nd Year</span>
-          </div>
-
-          <div class="holo-orbit-badge badge-bottom-right">
-            <i data-lucide="brain-circuit" style="width:14px;height:14px;color:var(--cyan-core);"></i>
-            <span>AI Attendance & Vision</span>
-          </div>
-
-          <div class="holo-orbit-badge badge-bottom-left">
-            <i data-lucide="users" style="width:14px;height:14px;color:var(--violet-core);"></i>
-            <span>Event Coordinator</span>
-          </div>
 
           <div class="holo-card-center">
             <!-- Holographic Avatar Portal with User Image -->
@@ -163,6 +166,24 @@
             <div class="holo-institution">
               <i data-lucide="award" style="width:14px;height:14px;"></i>
               <span>IIT Madras (BS)</span>
+            </div>
+          </div>
+
+          <!-- Orbital Badges (Responsively formatted to never overlap) -->
+          <div class="holo-mobile-badges-row">
+            <div class="holo-orbit-badge badge-top-left">
+              <i data-lucide="shield-check" style="width:14px;height:14px;color:var(--emerald-core);"></i>
+              <span>IIT Madras 2nd Year</span>
+            </div>
+
+            <div class="holo-orbit-badge badge-bottom-right">
+              <i data-lucide="brain-circuit" style="width:14px;height:14px;color:var(--cyan-core);"></i>
+              <span>AI Attendance & Vision</span>
+            </div>
+
+            <div class="holo-orbit-badge badge-bottom-left">
+              <i data-lucide="users" style="width:14px;height:14px;color:var(--violet-core);"></i>
+              <span>Event Coordinator</span>
             </div>
           </div>
         </div>
@@ -190,7 +211,7 @@
 
           <div class="dossier-body">
             <p>
-              I am a technology student and fresher with rigorous foundations in <strong>Python programming, SQL databases, and data handling</strong>, currently pursuing a Bachelor of Science (BS) at the <strong>Indian Institute of Technology Madras (IIT Madras)</strong> with an <strong>8.25 CGPA</strong>.
+              I am a technology student and software developer with robust foundations in <strong>Python, JavaScript, Vue.js, Java, Linux, and SQL databases</strong>, currently pursuing a Bachelor of Science (BS) at the <strong>Indian Institute of Technology Madras (IIT Madras)</strong> with an <strong>8.25 CGPA</strong>.
             </p>
 
             <div class="objective-highlight">
@@ -201,7 +222,7 @@
             </div>
 
             <p>
-              Beyond raw coding, I bring leadership acumen demonstrated as an <strong>Event Coordinator at IIT Madras</strong>, coordinating complex operations, logistics, and multi-team communications.
+              Beyond technical engineering, I bring leadership acumen demonstrated as an <strong>Event Coordinator at IIT Madras</strong>, orchestrating complex operations, logistics, and multi-team communications under tight schedules.
             </p>
 
             <div class="dossier-specs-grid">
@@ -214,12 +235,16 @@
                 <span class="spec-value" style="color:var(--cyan-core);">8.25 / 10.0</span>
               </div>
               <div class="spec-item">
-                <span class="spec-label">COLLEGE EMAIL</span>
-                <span class="spec-value" style="font-size:0.82rem; font-family:var(--font-mono); word-break:break-all;">24f3002105@ds.study.iitm.ac.in</span>
+                <span class="spec-label">LINKEDIN</span>
+                <span class="spec-value">
+                  <a href="https://www.linkedin.com/in/abhay-shukla7379" target="_blank" rel="noopener" style="color:var(--cyan-core); text-decoration:none;">
+                    abhay-shukla7379 ↗
+                  </a>
+                </span>
               </div>
               <div class="spec-item">
-                <span class="spec-label">PERSONAL EMAIL</span>
-                <span class="spec-value" style="font-size:0.82rem; font-family:var(--font-mono); word-break:break-all;">abhayshukla11487@gmail.com</span>
+                <span class="spec-label">PRIMARY EMAIL</span>
+                <span class="spec-value" style="font-size:0.85rem; font-family:var(--font-mono);">abhayshukla11487@gmail.com</span>
               </div>
             </div>
           </div>
@@ -231,28 +256,28 @@
               <i data-lucide="code-2" style="width:24px;height:24px;"></i>
             </div>
             <div class="pillar-info">
-              <h4>Python & Backend Engineering</h4>
-              <p>Object-oriented paradigms, automation scripts, data stream handling, and RESTful API integrations.</p>
+              <h4>Full-Stack & Frontend Engineering</h4>
+              <p>Modern interactive SPAs using JavaScript (ES6+), Vue.js, Jinja2 templating, HTML5, and responsive CSS systems.</p>
             </div>
           </div>
 
           <div class="cyber-card pillar-card">
             <div class="pillar-icon-box" style="color:var(--violet-core); border-color:rgba(99,102,241,0.3);">
-              <i data-lucide="database" style="width:24px;height:24px;"></i>
+              <i data-lucide="terminal" style="width:24px;height:24px;"></i>
             </div>
             <div class="pillar-info">
-              <h4>Database & SQL Architecture</h4>
-              <p>Normalized relational schemas, ACID transactions, complex joins, triggers, and query performance tuning.</p>
+              <h4>Python, Java & Linux Systems</h4>
+              <p>Backend logic with Python & Core Java OOPs, Linux command-line administration, automation scripting, and Git workflows.</p>
             </div>
           </div>
 
           <div class="cyber-card pillar-card">
             <div class="pillar-icon-box" style="color:var(--emerald-core); border-color:rgba(5,150,105,0.3);">
-              <i data-lucide="sparkles" style="width:24px;height:24px;"></i>
+              <i data-lucide="database" style="width:24px;height:24px;"></i>
             </div>
             <div class="pillar-info">
-              <h4>Machine Learning & Vision</h4>
-              <p>Model training, feature engineering, OpenCV face bounding, acoustic voice analysis, and predictive models.</p>
+              <h4>SQL & Machine Learning</h4>
+              <p>Relational databases (schema design, complex joins, views) combined with certified ML predictive models and OpenCV vision.</p>
             </div>
           </div>
 
@@ -269,25 +294,25 @@
       </div>
     </section>
 
-    <!-- 3. Skills Matrix Section -->
+    <!-- 3. Skills Matrix Section (Updated with JS, Vue, Jinja, HTML, Linux, Java) -->
     <section id="skills" class="section-wrap">
       <div class="section-head">
         <span class="section-pre-title">// TELEMETRY ARSENAL</span>
         <h2 class="section-title">TECHNICAL <span>CAPABILITIES</span></h2>
-        <p class="section-desc">Core competencies categorized by functional impact and proficiency levels.</p>
+        <p class="section-desc">Comprehensive competencies categorized by functional impact and proficiency levels.</p>
       </div>
 
       <div class="skills-filter-nav">
         <button class="filter-chip skill-filter-chip active" data-filter="all">ALL CAPABILITIES</button>
-        <button class="filter-chip skill-filter-chip" data-filter="core">PROGRAMMING & DATA</button>
-        <button class="filter-chip skill-filter-chip" data-filter="ml">AI & ANALYTICS</button>
-        <button class="filter-chip skill-filter-chip" data-filter="tools">PRODUCTIVITY & ENTERPRISE</button>
-        <button class="filter-chip skill-filter-chip" data-filter="leadership">LEADERSHIP & DOMAIN</button>
+        <button class="filter-chip skill-filter-chip" data-filter="languages">LANGUAGES</button>
+        <button class="filter-chip skill-filter-chip" data-filter="frontend">FRONTEND & WEB</button>
+        <button class="filter-chip skill-filter-chip" data-filter="core">DATA & BACKEND</button>
+        <button class="filter-chip skill-filter-chip" data-filter="tools">SYSTEMS & TOOLS</button>
       </div>
 
       <div class="skills-grid">
         <!-- Python -->
-        <div class="cyber-card skill-card" data-category="core">
+        <div class="cyber-card skill-card" data-category="languages">
           <div class="skill-top">
             <div class="skill-identity">
               <div class="skill-icon"><i data-lucide="terminal" style="width:20px;height:20px;"></i></div>
@@ -302,6 +327,114 @@
             <div class="skill-bar-fill" style="width: 92%;"></div>
           </div>
           <p class="skill-desc">OOP, scripting, algorithms, OpenCV, data structures, and automation engines.</p>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="cyber-card skill-card" data-category="languages">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon" style="color:#eab308;"><i data-lucide="code" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">JavaScript (ES6+)</h4>
+                <span class="skill-category-tag">MODERN SCRIPTING</span>
+              </div>
+            </div>
+            <span class="skill-pct">86%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 86%;"></div>
+          </div>
+          <p class="skill-desc">Async/await, DOM events, ES Modules, REST API integration, and web animation logic.</p>
+        </div>
+
+        <!-- Vue.js -->
+        <div class="cyber-card skill-card" data-category="frontend">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon" style="color:#10b981;"><i data-lucide="layers" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">Vue.js</h4>
+                <span class="skill-category-tag">FRONTEND FRAMEWORK</span>
+              </div>
+            </div>
+            <span class="skill-pct">82%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 82%;"></div>
+          </div>
+          <p class="skill-desc">Component-driven architecture, reactivity, directives (v-for, v-if), and SPA state flow.</p>
+        </div>
+
+        <!-- HTML5 & CSS3 -->
+        <div class="cyber-card skill-card" data-category="frontend">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon" style="color:#f97316;"><i data-lucide="file-code" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">HTML5 & CSS3</h4>
+                <span class="skill-category-tag">WEB ARCHITECTURE</span>
+              </div>
+            </div>
+            <span class="skill-pct">92%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 92%;"></div>
+          </div>
+          <p class="skill-desc">Semantic page design, Flexbox, CSS Grid, mobile-responsive layouts, and glassmorphic UI.</p>
+        </div>
+
+        <!-- Jinja / Jinja2 -->
+        <div class="cyber-card skill-card" data-category="frontend">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon" style="color:#ef4444;"><i data-lucide="curly-braces" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">Jinja / Jinja2</h4>
+                <span class="skill-category-tag">TEMPLATE ENGINE</span>
+              </div>
+            </div>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 85%;"></div>
+          </div>
+          <p class="skill-desc">Dynamic server-side HTML rendering, template inheritance, loops, filters, and Flask integration.</p>
+        </div>
+
+        <!-- Java -->
+        <div class="cyber-card skill-card" data-category="languages">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon" style="color:#0284c7;"><i data-lucide="coffee" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">Java</h4>
+                <span class="skill-category-tag">OBJECT-ORIENTED</span>
+              </div>
+            </div>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 80%;"></div>
+          </div>
+          <p class="skill-desc">Core Java, OOPs design principles, encapsulation, inheritance, polymorphism, and Collections.</p>
+        </div>
+
+        <!-- Linux & Bash -->
+        <div class="cyber-card skill-card" data-category="tools">
+          <div class="skill-top">
+            <div class="skill-identity">
+              <div class="skill-icon" style="color:#64748b;"><i data-lucide="command" style="width:20px;height:20px;"></i></div>
+              <div>
+                <h4 class="skill-name">Linux & Bash</h4>
+                <span class="skill-category-tag">OPERATING SYSTEM</span>
+              </div>
+            </div>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-fill" style="width: 85%;"></div>
+          </div>
+          <p class="skill-desc">Command-line navigation, file permissions, shell scripting, package managers, and process management.</p>
         </div>
 
         <!-- SQL -->
@@ -323,7 +456,7 @@
         </div>
 
         <!-- Machine Learning -->
-        <div class="cyber-card skill-card" data-category="ml">
+        <div class="cyber-card skill-card" data-category="core">
           <div class="skill-top">
             <div class="skill-identity">
               <div class="skill-icon"><i data-lucide="cpu" style="width:20px;height:20px;"></i></div>
@@ -338,24 +471,6 @@
             <div class="skill-bar-fill" style="width: 82%;"></div>
           </div>
           <p class="skill-desc">Certified in ML paradigms: regression, classification models, evaluation, and data prep.</p>
-        </div>
-
-        <!-- Data Handling -->
-        <div class="cyber-card skill-card" data-category="ml">
-          <div class="skill-top">
-            <div class="skill-identity">
-              <div class="skill-icon"><i data-lucide="bar-chart-3" style="width:20px;height:20px;"></i></div>
-              <div>
-                <h4 class="skill-name">Data Handling</h4>
-                <span class="skill-category-tag">DATA WRANGLING</span>
-              </div>
-            </div>
-            <span class="skill-pct">85%</span>
-          </div>
-          <div class="skill-bar-wrap">
-            <div class="skill-bar-fill" style="width: 85%;"></div>
-          </div>
-          <p class="skill-desc">ETL workflows, CSV/database ingestion, data cleaning, aggregation, and anomaly handling.</p>
         </div>
 
         <!-- MS Excel -->
@@ -376,26 +491,8 @@
           <p class="skill-desc">Pivot tables, nested VLOOKUP/XLOOKUP, formulas, financial models, and chart synthesis.</p>
         </div>
 
-        <!-- Trading Fundamentals -->
-        <div class="cyber-card skill-card" data-category="leadership">
-          <div class="skill-top">
-            <div class="skill-identity">
-              <div class="skill-icon"><i data-lucide="trending-up" style="width:20px;height:20px;"></i></div>
-              <div>
-                <h4 class="skill-name">Trading Fundamentals</h4>
-                <span class="skill-category-tag">FINANCIAL MARKETS</span>
-              </div>
-            </div>
-            <span class="skill-pct">80%</span>
-          </div>
-          <div class="skill-bar-wrap">
-            <div class="skill-bar-fill" style="width: 80%;"></div>
-          </div>
-          <p class="skill-desc">Market structure analysis, technical indicators, risk-to-reward ratios, and price action.</p>
-        </div>
-
         <!-- Event Management & Coordination -->
-        <div class="cyber-card skill-card" data-category="leadership">
+        <div class="cyber-card skill-card" data-category="tools">
           <div class="skill-top">
             <div class="skill-identity">
               <div class="skill-icon"><i data-lucide="flag" style="width:20px;height:20px;"></i></div>
@@ -412,22 +509,22 @@
           <p class="skill-desc">Campus event operations at IIT Madras, participant hospitality, and contingency logistics.</p>
         </div>
 
-        <!-- Communication & Enterprise Suite -->
+        <!-- Trading Fundamentals -->
         <div class="cyber-card skill-card" data-category="tools">
           <div class="skill-top">
             <div class="skill-identity">
-              <div class="skill-icon"><i data-lucide="presentation" style="width:20px;height:20px;"></i></div>
+              <div class="skill-icon"><i data-lucide="trending-up" style="width:20px;height:20px;"></i></div>
               <div>
-                <h4 class="skill-name">MS Suite & Communication</h4>
-                <span class="skill-category-tag">PROFESSIONAL SUITE</span>
+                <h4 class="skill-name">Trading Fundamentals</h4>
+                <span class="skill-category-tag">FINANCIAL MARKETS</span>
               </div>
             </div>
-            <span class="skill-pct">90%</span>
+            <span class="skill-pct">80%</span>
           </div>
           <div class="skill-bar-wrap">
-            <div class="skill-bar-fill" style="width: 90%;"></div>
+            <div class="skill-bar-fill" style="width: 80%;"></div>
           </div>
-          <p class="skill-desc">High-impact PowerPoint pitch decks, Word executive documentation, and bilingual articulation.</p>
+          <p class="skill-desc">Market structure analysis, technical indicators, risk-to-reward ratios, and price action.</p>
         </div>
       </div>
     </section>
@@ -586,20 +683,6 @@
             </p>
 
             <div class="contact-channels">
-              <!-- College Email ID -->
-              <div class="contact-channel-item">
-                <div class="channel-info">
-                  <i data-lucide="graduation-cap" class="channel-icon"></i>
-                  <div>
-                    <span style="font-size:0.75rem; color:var(--text-dim); display:block; font-family:var(--font-mono); font-weight:600;">OFFICIAL COLLEGE RELAY</span>
-                    <span class="channel-text-val">24f3002105@ds.study.iitm.ac.in</span>
-                  </div>
-                </div>
-                <button class="copy-channel-btn" data-copy="24f3002105@ds.study.iitm.ac.in" title="Copy College Email">
-                  <i data-lucide="copy" style="width:16px;height:16px;"></i>
-                </button>
-              </div>
-
               <!-- Personal Email ID -->
               <div class="contact-channel-item">
                 <div class="channel-info">
@@ -614,34 +697,51 @@
                 </button>
               </div>
 
+              <!-- College Email ID -->
+              <div class="contact-channel-item">
+                <div class="channel-info">
+                  <i data-lucide="graduation-cap" class="channel-icon"></i>
+                  <div>
+                    <span style="font-size:0.75rem; color:var(--text-dim); display:block; font-family:var(--font-mono); font-weight:600;">OFFICIAL COLLEGE RELAY</span>
+                    <span class="channel-text-val">24f3002105@ds.study.iitm.ac.in</span>
+                  </div>
+                </div>
+                <button class="copy-channel-btn" data-copy="24f3002105@ds.study.iitm.ac.in" title="Copy College Email">
+                  <i data-lucide="copy" style="width:16px;height:16px;"></i>
+                </button>
+              </div>
+
+              <!-- LinkedIn Profile -->
+              <div class="contact-channel-item">
+                <div class="channel-info">
+                  <i data-lucide="linkedin" class="channel-icon"></i>
+                  <div>
+                    <span style="font-size:0.75rem; color:var(--text-dim); display:block; font-family:var(--font-mono); font-weight:600;">PROFESSIONAL NETWORK</span>
+                    <span class="channel-text-val">linkedin.com/in/abhay-shukla7379</span>
+                  </div>
+                </div>
+                <a href="https://www.linkedin.com/in/abhay-shukla7379" target="_blank" rel="noopener" class="copy-channel-btn" title="Open LinkedIn Profile">
+                  <i data-lucide="external-link" style="width:16px;height:16px;"></i>
+                </a>
+              </div>
+
               <!-- Location -->
               <div class="contact-channel-item">
                 <div class="channel-info">
                   <i data-lucide="map-pin" class="channel-icon"></i>
                   <div>
                     <span style="font-size:0.75rem; color:var(--text-dim); display:block; font-family:var(--font-mono); font-weight:600;">BASE STATION</span>
-                    <span class="channel-text-val">IIT Madras, Chennai // Open to Pan-India / Remote</span>
+                    <span class="channel-text-val">IIT Madras, Chennai // Open to Remote & Pan-India</span>
                   </div>
                 </div>
                 <button class="copy-channel-btn" data-copy="IIT Madras, Chennai" title="Copy Location">
                   <i data-lucide="copy" style="width:16px;height:16px;"></i>
                 </button>
               </div>
-
-              <!-- Status -->
-              <div class="contact-channel-item">
-                <div class="channel-info">
-                  <i data-lucide="radio" class="channel-icon" style="color:var(--emerald-core);"></i>
-                  <div>
-                    <span style="font-size:0.75rem; color:var(--text-dim); display:block; font-family:var(--font-mono); font-weight:600;">AVAILABILITY STATUS</span>
-                    <span class="channel-text-val" style="color:var(--emerald-core);">Actively Interviewing for Internships & Roles</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
-          <div style="display:flex; gap:12px;">
+          <div style="display:flex; gap:12px; margin-top: 16px;">
             <button class="cyber-btn cyber-btn-primary resume-download-trigger" style="flex:1;">
               <i data-lucide="file-text" style="width:16px;height:16px;"></i>
               Download Dossier
@@ -649,10 +749,11 @@
           </div>
         </div>
 
+        <!-- Contact Form with Direct Email Forwarding Integration -->
         <div class="cyber-card contact-form-side">
           <div class="hud-corner-br"></div>
           <h3 style="font-family:var(--font-display); font-size:1.5rem; font-weight:800; color:var(--text-main); margin-bottom:12px;">TRANSMISSION FORM</h3>
-          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Send a message packet directly to Abhay's comms link.</p>
+          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">Send a message packet directly to Abhay's inbox.</p>
 
           <form id="cyber-contact-form" class="cyber-form">
             <div class="form-field-group">
@@ -670,9 +771,9 @@
               <textarea id="sender-msg" class="cyber-textarea" placeholder="State your opportunity, role requirements, or collaboration idea..." required></textarea>
             </div>
 
-            <button type="submit" class="cyber-btn cyber-btn-primary" style="width:100%;">
+            <button type="submit" id="submit-btn" class="cyber-btn cyber-btn-primary" style="width:100%;">
               <i data-lucide="send" style="width:16px;height:16px;"></i>
-              Transmit Message Packet
+              <span>Transmit Message Packet</span>
             </button>
           </form>
         </div>
@@ -701,11 +802,11 @@
         </div>
 
         <div class="social-links">
-          <a href="https://github.com/abhayshukla" target="_blank" rel="noopener" class="social-link" title="GitHub">
-            <i data-lucide="github" style="width:18px;height:18px;"></i>
-          </a>
-          <a href="https://linkedin.com/in/abhayshukla" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/abhay-shukla7379" target="_blank" rel="noopener" class="social-link" title="LinkedIn Profile">
             <i data-lucide="linkedin" style="width:18px;height:18px;"></i>
+          </a>
+          <a href="https://github.com/24f3002105" target="_blank" rel="noopener" class="social-link" title="GitHub">
+            <i data-lucide="github" style="width:18px;height:18px;"></i>
           </a>
           <a href="mailto:abhayshukla11487@gmail.com" class="social-link" title="Personal Email">
             <i data-lucide="mail" style="width:18px;height:18px;"></i>
